@@ -1,0 +1,18 @@
+main {
+    height: 800px;
+    width: 100%;
+    background-color: var(--background-color-gray);
+}
+
+.mainContainer {
+    padding: 280px 60px 0 60px;
+}
+
+.mainButton {
+    margin-top: 50px;
+    font-size: 18px;
+}
+
+.title {
+    font-size: 64px;
+}
