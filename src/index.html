@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Узнайте больше о нашей компании и истории">
+
+    <link rel="icon" type="image/svg+xml" href="assets/logo.svg"/>
+
+    <link rel="stylesheet" href="styles/global.css">
+    <link rel="stylesheet" href="styles/fonts.css">
+    <link rel="stylesheet" href="styles/index.css">
+
+    <title>Nonexsistingcompany</title>
+</head>
+<body>
+<nav>
+    <div class="navContainer">
+        <a href="/" class="navBreadcrumb">
+            <img src="/assets/logo.svg" alt="Nonexsistingcompany" height="32" width="32">
+        </a>
+
+        <div class="navLinks">
+            <a href="/">Главная</a>
+            <a href="/about">О нас</a>
+            <a href="/contacts">Контакты</a>
+        </div>
+    </div>
+</nav>
+
+<main class="mainContainer">
+</main>
+
+<dialog class="contactFormDialog" id="contactForm" aria-modal="true" aria-labelledby="contactFormTitle">
+    <form id="requestForm" class="contactForm" method="dialog">
+        <button class="modalClose" id="modalClose" aria-label="Закрыть" type="button">&times;</button>
+        <h2 id="contactFormTitle">Оставить заявку</h2>
+        <fieldset>
+            <legend class="visually-hidden">Контактная форма</legend>
+            <div class="contactFormGroup">
+                <label for="name">Имя</label>
+                <input type="text" id="name" name="name" required autocomplete="name"/>
+                <span class="contactFormError" aria-live="polite"></span>
+            </div>
+
+            <div class="contactFormGroup">
+                <label for="email">Email</label>
+                <input type="text" id="email" name="email" required autocomplete="email"/>
+                <span class="contactFormError" aria-live="polite"></span>
+            </div>
+
+            <div class="contactFormGroup">
+                <label for="phone">Телефон</label>
+                <input type="tel" id="phone" name="phone" required autocomplete="tel"/>
+                <span class="contactFormError" aria-live="polite"></span>
+            </div>
+
+            <div class="contactFormGroup">
+                <label for="message">Сообщение</label>
+                <textarea id="message" name="message" required autocomplete="off"></textarea>
+                <span class="contactFormError" aria-live="polite"></span>
+            </div>
+        </fieldset>
+        <button type="submit" class="buttonPrimary">Отправить</button>
+    </form>
+</dialog>
+
+<footer>
+    <p>&copy; 2025 Nonexsistingcompany. Все права защищены.</p>
+</footer>
+
+<script src="scripts/contactForm.ts" type="module"></script>
+
+</body>
+</html>

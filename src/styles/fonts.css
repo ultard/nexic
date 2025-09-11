@@ -1,0 +1,10 @@
+@font-face {
+    font-family: Montserrat;
+    src: url('../assets/fonts/Montserrat.ttf') format('truetype');
+    font-display: fallback;
+}
+
+* {
+    font-weight: 600;
+    font-family: Montserrat, sans-serif;
+}
