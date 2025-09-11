@@ -34,10 +34,48 @@
         Связаться со мной
         <img src="/assets/arrow-right.svg" alt="arrow right">
     </button>
+
+    <dialog class="contactFormDialog" id="contactForm" aria-modal="true" aria-labelledby="contactFormTitle">
+        <form id="requestForm" class="contactForm" method="dialog">
+            <button class="modalClose" id="modalClose" aria-label="Закрыть" type="button">&times;</button>
+            <h2 id="contactFormTitle">Оставить заявку</h2>
+            <fieldset>
+                <legend class="visually-hidden">Контактная форма</legend>
+                <div class="contactFormGroup">
+                    <label for="name">Имя</label>
+                    <input type="text" id="name" name="name" required autocomplete="name"/>
+                    <span class="contactFormError" aria-live="polite"></span>
+                </div>
+
+                <div class="contactFormGroup">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required autocomplete="email"/>
+                    <span class="contactFormError" aria-live="polite"></span>
+                </div>
+
+                <div class="contactFormGroup">
+                    <label for="phone">Телефон</label>
+                    <input type="tel" id="phone" name="phone" required autocomplete="tel"/>
+                    <span class="contactFormError" aria-live="polite"></span>
+                </div>
+
+                <div class="contactFormGroup">
+                    <label for="message">Сообщение</label>
+                    <textarea id="message" name="message" required autocomplete="off"></textarea>
+                    <span class="contactFormError" aria-live="polite"></span>
+                </div>
+            </fieldset>
+            <button type="submit" class="buttonPrimary">Отправить</button>
+        </form>
+    </dialog>
+
 </main>
 
 <footer>
     <p>&copy; 2025 TercodeDigital. Все права защищены.</p>
 </footer>
+
+<script src="scripts/contactForm.ts"></script>
+
 </body>
 </html>

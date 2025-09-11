@@ -16,3 +16,81 @@ main {
 .title {
     font-size: 64px;
 }
+
+.contactFormDialog {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    border: none;
+    border-radius: 16px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.25);
+    padding: 0;
+    background: var(--background-color-gray, #fff);
+    max-width: 420px;
+    width: 100%;
+}
+
+.contactForm {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    padding: 32px 32px 24px 32px;
+}
+
+.contactForm h2 {
+    margin: 0 0 12px 0;
+    font-size: 28px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.contactFormGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.contactForm fieldset {
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
+.contactForm input,
+.contactForm textarea {
+    border: none;
+    border-radius: 8px;
+    background: #f3f6fa;
+    padding: 12px 16px;
+    font-size: 16px;
+    color: #222;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+    transition: box-shadow 0.2s, background 0.2s;
+}
+
+.contactForm input:focus,
+.contactForm textarea:focus {
+    outline: 2px solid #ffffff;
+    background: #fff;
+    box-shadow: 0 2px 8px rgba(79,140,255,0.10);
+}
+
+.contactForm label {
+    font-size: 15px;
+    font-weight: 500;
+    color: #444;
+}
+
+.contactForm textarea {
+    min-height: 80px;
+    max-height: 200px;
+    resize: vertical;
+}
+
+.contactFormError {
+    color: #e74c3c;
+    font-size: 13px;
+    min-height: 18px;
+}
