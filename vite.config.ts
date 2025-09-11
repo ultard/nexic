@@ -9,7 +9,6 @@ export default defineConfig({
                 main: './src/index.html',
                 about: './src/about.html',
                 contacts: './src/contacts.html',
-                projects: './src/projects.html',
             }
         }
     }
