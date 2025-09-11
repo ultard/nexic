@@ -1,4 +1,4 @@
-const openBtn = document.querySelector('.mainButton.buttonPrimary') as HTMLButtonElement;
+const openBtn = document.getElementById('contactFormOpenButton') as HTMLButtonElement;
 const dialog = document.getElementById('contactForm') as HTMLDialogElement;
 const closeBtn = document.getElementById('modalClose') as HTMLButtonElement;
 const form = document.getElementById('requestForm') as HTMLFormElement;
