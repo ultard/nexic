@@ -1,32 +1,201 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru" class="htmlBase">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Узнайте больше о нашей компании и истории">
+    <meta name="description" content="Свяжитесь с нами - контакты Nonexsistingcompany">
 
     <link rel="icon" type="image/svg+xml" href="assets/logo.svg"/>
 
     <link rel="stylesheet" href="styles/global.css">
     <link rel="stylesheet" href="styles/fonts.css">
+    <link rel="stylesheet" href="styles/contacts.css">
 
-    <title>Nonexsistingcompany</title>
+    <title>Контакты - Nonexsistingcompany</title>
 </head>
-<body>
-<nav>
+<body class="bodyBase">
+<nav class="navBase">
     <div class="navContainer">
-        <a href="./index.html" class="navBreadcrumb">
-            <img src="/assets/logo.svg" alt="Nonexsistingcompany" height="32" width="32">
-            <p>/</p>
-            <p>Контакты</p>
-        </a>
+        <div class="navBreadcrumb">
+            <a href="./index.html" class="linkBase focusVisible">
+                <img src="assets/logo.svg" alt="Nonexsistingcompany" height="32" width="32" class="imgBase">
+            </a>
+            <span style="color: var(--color-muted); margin: 0 var(--space-2);">/</span>
+            <span style="color: var(--color-muted);">Контакты</span>
+        </div>
 
         <div class="navLinks">
-            <a href="./index.html">Главная</a>
-            <a href="./about.html">О нас</a>
-            <a href="./contacts.html">Контакты</a>
+            <a href="./index.html" class="navLink linkBase focusVisible">Главная</a>
+            <a href="./about.html" class="navLink linkBase focusVisible">О нас</a>
+            <a href="./contacts.html" class="navLink navLinkActive linkBase focusVisible">Контакты</a>
         </div>
     </div>
 </nav>
+
+<main class="mainContainer">
+    <h1 class="sectionTitle" style="text-align: center; margin-bottom: var(--space-5);">Свяжитесь с нами</h1>
+
+    <!-- Контактная информация -->
+    <section class="sectionBase">
+        <div class="contactsGrid">
+            <!-- Левая колонка - информация -->
+            <div>
+                <h2 class="sectionTitle">Наши контакты</h2>
+                <div class="contactInfoBlock">
+                    <div class="contactInfoItem">
+                        <h3 class="contactInfoTitle">📍 Адрес</h3>
+                        <p class="sectionText">г. Москва, ул. Примерная, д. 1, офис 101</p>
+                    </div>
+
+                    <div class="contactInfoItem">
+                        <h3 class="contactInfoTitle">📞 Телефон</h3>
+                        <p class="sectionText">
+                            <a href="tel:+71234567890" class="linkBase focusVisible">+7 (123) 456-78-90</a>
+                        </p>
+                    </div>
+
+                    <div class="contactInfoItem">
+                        <h3 class="contactInfoTitle">✉️ Email</h3>
+                        <p class="sectionText">
+                            <a href="mailto:info@nonexsistingcompany.ru" class="linkBase focusVisible">info@nonexsistingcompany.ru</a>
+                        </p>
+                    </div>
+
+                    <div class="contactInfoItem">
+                        <h3 class="contactInfoTitle">🕒 Время работы</h3>
+                        <p class="sectionText">Пн-Пт: 9:00 - 18:00<br>Сб-Вс: выходные</p>
+                    </div>
+                </div>
+
+                <!-- Карта (заглушка) -->
+                <div class="mapPlaceholder">
+                    <p>
+                        🗺️<br>
+                        Здесь будет интерактивная карта<br>
+                        с местоположением офиса
+                    </p>
+                </div>
+            </div>
+
+            <!-- Правая колонка - форма -->
+            <div>
+                <div class="formContainer contactPageForm">
+                    <h2 style="text-align: center; margin-bottom: var(--space-4);">Напишите нам</h2>
+                    <form id="contactPageForm">
+                        <div class="formGroup">
+                            <label for="contactName" class="formLabel">Имя *</label>
+                            <input type="text" id="contactName" name="name" class="formInput focusVisible" required>
+                            <div class="formError" id="contactNameError"></div>
+                        </div>
+
+                        <div class="formGroup">
+                            <label for="contactEmail" class="formLabel">Email *</label>
+                            <input type="email" id="contactEmail" name="email" class="formInput focusVisible" required>
+                            <div class="formError" id="contactEmailError"></div>
+                        </div>
+
+                        <div class="formGroup">
+                            <label for="contactPhone" class="formLabel">Телефон *</label>
+                            <input type="tel" id="contactPhone" name="phone" class="formInput focusVisible" required>
+                            <div class="formError" id="contactPhoneError"></div>
+                        </div>
+
+                        <div class="formGroup">
+                            <label for="contactSubject" class="formLabel">Тема обращения *</label>
+                            <select id="contactSubject" name="subject" class="formSelect focusVisible" required>
+                                <option value="">Выберите тему</option>
+                                <option value="consultation">Консультация</option>
+                                <option value="project">Обсуждение проекта</option>
+                                <option value="support">Техническая поддержка</option>
+                                <option value="partnership">Партнерство</option>
+                                <option value="other">Другое</option>
+                            </select>
+                            <div class="formError" id="contactSubjectError"></div>
+                        </div>
+
+                        <div class="formGroup">
+                            <label for="contactMessage" class="formLabel">Сообщение *</label>
+                            <textarea id="contactMessage" name="message" rows="5" class="formTextarea focusVisible" required placeholder="Расскажите подробнее о вашем вопросе или проекте..."></textarea>
+                            <div class="formError" id="contactMessageError"></div>
+                        </div>
+
+                        <div class="formGroup">
+                            <label class="consentLabel">
+                                <input type="checkbox" id="contactConsent" name="consent" required class="focusVisible">
+                                <span class="formLabel" style="margin-bottom: 0;">Согласен на обработку персональных данных *</span>
+                            </label>
+                            <div class="formError" id="contactConsentError"></div>
+                        </div>
+
+                        <button type="submit" class="buttonPrimary focusVisible" style="width: 100%; justify-content: center;">
+                            Отправить сообщение
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ секция -->
+    <section class="sectionBase">
+        <h2 class="sectionTitle" style="text-align: center;">Часто задаваемые вопросы</h2>
+        <div class="faqContainer">
+            <details class="faqItem">
+                <summary>
+                    Сколько времени занимает разработка проекта?
+                </summary>
+                <p class="sectionText">Время разработки зависит от сложности проекта. Простой сайт-визитка — 1-2 недели, сложное веб-приложение — 2-6 месяцев. Мы всегда предоставляем детальный план с временными рамками.</p>
+            </details>
+
+            <details class="faqItem">
+                <summary>
+                    Какие технологии вы используете?
+                </summary>
+                <p class="sectionText">Мы работаем с современным стеком: React, Vue.js, Node.js, Python, PHP, мобильная разработка на React Native и Flutter. Выбор технологий зависит от специфики проекта.</p>
+            </details>
+
+            <details class="faqItem">
+                <summary>
+                    Предоставляете ли вы техническую поддержку?
+                </summary>
+                <p class="sectionText">Да, мы предоставляем техническую поддержку и сопровождение всех наших проектов. Доступны различные тарифные планы поддержки.</p>
+            </details>
+
+            <details class="faqItem">
+                <summary>
+                    Работаете ли вы с клиентами из других городов?
+                </summary>
+                <p class="sectionText">Конечно! Мы успешно работаем с клиентами по всей России и СНГ. Все коммуникации ведем онлайн, что не влияет на качество работы.</p>
+            </details>
+        </div>
+    </section>
+
+    <!-- Социальные сети -->
+    <section class="sectionBase socialSection">
+        <h2 class="sectionTitle">Мы в социальных сетях</h2>
+        <p class="sectionText" style="margin-bottom: var(--space-4);">Следите за нашими новостями и проектами</p>
+        <div class="socialLinks">
+            <a href="#" class="buttonSecondary socialLink focusVisible">
+                📘 ВКонтакте
+            </a>
+            <a href="#" class="buttonSecondary socialLink focusVisible">
+                📷 Instagram
+            </a>
+            <a href="#" class="buttonSecondary socialLink focusVisible">
+                💼 LinkedIn
+            </a>
+            <a href="#" class="buttonSecondary socialLink focusVisible">
+                📱 Telegram
+            </a>
+        </div>
+    </section>
+</main>
+
+<footer class="footerBase">
+    <p>&copy; 2025 Nonexsistingcompany. Все права защищены.</p>
+    <p>Телефон: +7 (123) 456-78-90 | Email: info@nonexsistingcompany.ru</p>
+</footer>
+
+<script src="scripts/contactForm.ts" type="module"></script>
 </body>
 </html>

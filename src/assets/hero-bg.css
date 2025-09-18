@@ -1,0 +1,5 @@
+/* Заглушка для hero-bg.jpg */
+.heroSection {
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-muted) 100%);
+}
+

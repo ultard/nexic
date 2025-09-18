@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru" class="htmlBase">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Узнайте больше о нашей компании и истории">
+    <meta name="description" content="Nonexsistingcompany - инновационные решения для вашего бизнеса">
 
     <link rel="icon" type="image/svg+xml" href="assets/logo.svg"/>
 
@@ -11,66 +11,147 @@
     <link rel="stylesheet" href="styles/fonts.css">
     <link rel="stylesheet" href="styles/index.css">
 
-    <title>Nonexsistingcompany</title>
+    <title>Главная - Nonexsistingcompany</title>
 </head>
-<body>
-<nav>
+<body class="bodyBase">
+<nav class="navBase">
     <div class="navContainer">
-        <a href="./index.html" class="navBreadcrumb">
-            <img src="/assets/logo.svg" alt="Nonexsistingcompany" height="32" width="32">
+        <a href="./index.html" class="navBreadcrumb linkBase">
+            <img src="assets/logo.svg" alt="Nonexsistingcompany" height="32" width="32" class="imgBase">
         </a>
 
         <div class="navLinks">
-            <a href="./index.html">Главная</a>
-            <a href="./about.html">О нас</a>
-            <a href="./contacts.html">Контакты</a>
+            <a href="./index.html" class="navLink navLinkActive linkBase focusVisible">Главная</a>
+            <a href="./about.html" class="navLink linkBase focusVisible">О нас</a>
+            <a href="./contacts.html" class="navLink linkBase focusVisible">Контакты</a>
         </div>
     </div>
 </nav>
 
 <main class="mainContainer">
-    <button class="buttonPrimary" id="contactFormOpenButton"></button>
+    <!-- Герой-секция с фоновым изображением -->
+    <section class="heroSection">
+        <h1 class="heroTitle">Добро пожаловать в Nonexsistingcompany</h1>
+        <p class="heroText">Мы создаем инновационные решения для развития вашего бизнеса</p>
+        <a href="#contacts" class="buttonPrimary focusVisible">Начать сотрудничество</a>
+    </section>
+
+    <!-- Responsive изображение -->
+    <section class="sectionBase">
+        <h2 class="sectionTitle">Наши проекты</h2>
+        <!-- Заглушка для демонстрации responsive изображения -->
+        <div style="background: var(--background-color-gray); height: 360px; border-radius: var(--radius); display: flex; align-items: center; justify-content: center; border: 2px dashed var(--color-muted);">
+            <p style="color: var(--color-muted); text-align: center;">
+                🖼️<br>
+                Здесь будет responsive изображение<br>
+                с srcset и sizes
+            </p>
+        </div>
+    </section>
+
+    <!-- Секция с видео -->
+    <section class="sectionBase">
+        <h2 class="sectionTitle">О нашей работе</h2>
+        <div class="mediaContainer">
+            <!-- Заглушка для демонстрации видео -->
+            <div style="background: var(--background-color-gray); width: 100%; height: 100%; border-radius: var(--radius); display: flex; align-items: center; justify-content: center; border: 2px dashed var(--color-muted);">
+                <p style="color: var(--color-muted); text-align: center; font-size: var(--font-size-lg);">
+                    🎥<br>
+                    Здесь будет видео<br>
+                    с контролами и субтитрами
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Секция услуг -->
+    <section id="services" class="sectionBase targetHighlight">
+        <h2 class="sectionTitle">Наши услуги</h2>
+        <p class="sectionText">Мы предоставляем полный спектр услуг по разработке веб-приложений, мобильных приложений и консалтингу в области цифровых технологий.</p>
+        <a href="#contacts" class="buttonSecondary focusVisible">Узнать больше</a>
+    </section>
+
+    <!-- Секция портфолио -->
+    <section id="portfolio" class="sectionBase targetHighlight">
+        <h2 class="sectionTitle">Портфолио</h2>
+        <p class="sectionText">Ознакомьтесь с нашими успешными проектами и решениями, которые помогли клиентам достичь своих бизнес-целей.</p>
+        <div class="portfolioGrid">
+            <div class="portfolioCard">
+                <!-- Заглушка изображения -->
+                <div style="width: 100%; height: 220px; background: linear-gradient(45deg, var(--color-primary), var(--color-muted)); border-radius: var(--radius); display: flex; align-items: center; justify-content: center; margin-bottom: var(--space-3);">
+                    <span style="color: white; font-size: var(--font-size-lg);">🛒</span>
+                </div>
+                <h3 class="portfolioCardTitle">Интернет-магазин</h3>
+                <p class="sectionText">Разработка полнофункционального интернет-магазина с системой платежей</p>
+            </div>
+            <div class="portfolioCard">
+                <!-- Заглушка изображения -->
+                <div style="width: 100%; height: 220px; background: linear-gradient(45deg, var(--color-success), var(--color-primary)); border-radius: var(--radius); display: flex; align-items: center; justify-content: center; margin-bottom: var(--space-3);">
+                    <span style="color: white; font-size: var(--font-size-lg);">📱</span>
+                </div>
+                <h3 class="portfolioCardTitle">Мобильное приложение</h3>
+                <p class="sectionText">Кроссплатформенное приложение для управления задачами</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Секция контактов -->
+    <section id="contacts" class="sectionBase targetHighlight">
+        <h2 class="sectionTitle">Контактная информация</h2>
+        <p class="sectionText">Свяжитесь с нами для обсуждения вашего проекта. Мы всегда готовы помочь!</p>
+        <div class="contactInfo">
+            <p class="contactInfoItem"><strong>Телефон:</strong> +7 (123) 456-78-90</p>
+            <p class="contactInfoItem"><strong>Email:</strong> info@nonexsistingcompany.ru</p>
+            <p class="contactInfoItem" style="margin-bottom: var(--space-4);"><strong>Адрес:</strong> г. Москва, ул. Примерная, д. 1</p>
+        </div>
+        <a href="./contacts.html" class="buttonPrimary focusVisible">Подробнее</a>
+    </section>
+
+    <button class="buttonPrimary focusVisible" id="contactFormOpenButton" type="button">Связаться с нами</button>
 </main>
 
-<dialog class="contactFormDialog" id="contactForm" aria-modal="true" aria-labelledby="contactFormTitle">
-    <form id="requestForm" class="contactForm" method="dialog">
-        <button class="modalClose" id="modalClose" aria-label="Закрыть" type="button">&times;</button>
-        <h2 id="contactFormTitle">Оставить заявку</h2>
-        <fieldset>
-            <legend class="visually-hidden">Контактная форма</legend>
-            <div class="contactFormGroup">
-                <label for="name">Имя</label>
-                <input type="text" id="name" name="name" required autocomplete="name"/>
-                <span class="contactFormError" aria-live="polite"></span>
-            </div>
-
-            <div class="contactFormGroup">
-                <label for="email">Email</label>
-                <input type="text" id="email" name="email" required autocomplete="email"/>
-                <span class="contactFormError" aria-live="polite"></span>
-            </div>
-
-            <div class="contactFormGroup">
-                <label for="phone">Телефон</label>
-                <input type="tel" id="phone" name="phone" required autocomplete="tel"/>
-                <span class="contactFormError" aria-live="polite"></span>
-            </div>
-
-            <div class="contactFormGroup">
-                <label for="message">Сообщение</label>
-                <textarea id="message" name="message" required autocomplete="off"></textarea>
-                <span class="contactFormError" aria-live="polite"></span>
-            </div>
-        </fieldset>
-        <button type="submit" class="buttonPrimary">Отправить</button>
-    </form>
-</dialog>
-
-<footer>
+<footer class="footerBase">
     <p>&copy; 2025 Nonexsistingcompany. Все права защищены.</p>
+    <p>Телефон: +7 (123) 456-78-90 | Email: info@nonexsistingcompany.ru</p>
 </footer>
 
-<script src="/scripts/contactForm.ts" type="module"></script>
+<!-- Модальное окно с формой -->
+<div id="contactModal" class="modalOverlay" style="display: none;">
+    <div class="modalContent">
+        <button class="modalClose focusVisible" type="button" id="contactFormCloseButton">&times;</button>
+        <div class="formContainer">
+            <h2 style="text-align: center; margin-bottom: var(--space-4);">Свяжитесь с нами</h2>
+            <form id="contactForm">
+                <div class="formGroup">
+                    <label for="name" class="formLabel">Имя *</label>
+                    <input type="text" id="name" name="name" class="formInput focusVisible" required>
+                    <div class="formError" id="nameError"></div>
+                </div>
 
+                <div class="formGroup">
+                    <label for="email" class="formLabel">Email *</label>
+                    <input type="email" id="email" name="email" class="formInput focusVisible" required>
+                    <div class="formError" id="emailError"></div>
+                </div>
+
+                <div class="formGroup">
+                    <label for="phone" class="formLabel">Телефон *</label>
+                    <input type="tel" id="phone" name="phone" class="formInput focusVisible" required>
+                    <div class="formError" id="phoneError"></div>
+                </div>
+
+                <div class="formGroup">
+                    <label for="message" class="formLabel">Сообщение *</label>
+                    <textarea id="message" name="message" rows="4" class="formTextarea focusVisible" required></textarea>
+                    <div class="formError" id="messageError"></div>
+                </div>
+
+                <button type="submit" class="buttonPrimary focusVisible" style="width: 100%; justify-content: center;">Отправить</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script src="scripts/contactForm.ts" type="module"></script>
 </body>
 </html>

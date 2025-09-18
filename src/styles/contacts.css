@@ -1,0 +1,212 @@
+/* Дополнительные стили для страницы контактов */
+
+/* Основная сетка контактов */
+.contactsGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-5);
+    align-items: start;
+}
+
+/* Стили для блока контактной информации */
+.contactInfoBlock {
+    background: var(--background-color-gray);
+    padding: var(--space-4);
+    border-radius: var(--radius);
+    margin-bottom: var(--space-4);
+}
+
+.contactInfoItem {
+    margin-bottom: var(--space-3);
+}
+
+.contactInfoItem:last-child {
+    margin-bottom: 0;
+}
+
+.contactInfoTitle {
+    margin-bottom: var(--space-2);
+    color: var(--color-primary);
+    font-size: var(--font-size-lg);
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+}
+
+/* Карта-заглушка */
+.mapPlaceholder {
+    background: var(--background-color-gray);
+    height: 300px;
+    border-radius: var(--radius);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px dashed var(--color-muted);
+    text-align: center;
+    color: var(--color-muted);
+    font-size: var(--font-size-lg);
+}
+
+/* FAQ стили */
+.faqContainer {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.faqItem {
+    margin-bottom: var(--space-3);
+    background: var(--background-color-gray);
+    border-radius: var(--radius);
+    padding: var(--space-4);
+    transition: var(--transition);
+}
+
+.faqItem:hover {
+    box-shadow: var(--shadow);
+}
+
+.faqItem summary {
+    cursor: pointer;
+    font-weight: 500;
+    margin-bottom: var(--space-2);
+    list-style: none;
+    position: relative;
+    padding-right: var(--space-4);
+}
+
+.faqItem summary::-webkit-details-marker {
+    display: none;
+}
+
+.faqItem summary::after {
+    content: '+';
+    position: absolute;
+    right: 0;
+    top: 0;
+    font-size: var(--font-size-xl);
+    font-weight: bold;
+    color: var(--color-primary);
+    transition: var(--transition);
+}
+
+.faqItem[open] summary::after {
+    content: '−';
+    transform: rotate(0deg);
+}
+
+.faqItem summary:focus-visible {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 2px;
+    border-radius: var(--radius-sm);
+}
+
+/* Социальные сети */
+.socialSection {
+    text-align: center;
+    background: var(--background-color-gray);
+    border-radius: var(--radius);
+    padding: var(--space-5);
+}
+
+.socialLinks {
+    display: flex;
+    gap: var(--space-4);
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.socialLink {
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.socialLink:hover {
+    transform: translateY(-2px);
+}
+
+/* Улучшение формы на странице контактов */
+.contactPageForm {
+    background: var(--color-white);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    overflow: hidden;
+}
+
+/* Стили для чекбокса согласия */
+.consentLabel {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--space-2);
+    cursor: pointer;
+    line-height: 1.4;
+}
+
+.consentLabel input[type="checkbox"] {
+    margin-top: 2px;
+    flex-shrink: 0;
+}
+
+/* Анимации */
+@keyframes slideInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.faqItem {
+    animation: slideInUp 0.5s ease-out;
+}
+
+.faqItem:nth-child(2) {
+    animation-delay: 0.1s;
+}
+
+.faqItem:nth-child(3) {
+    animation-delay: 0.2s;
+}
+
+.faqItem:nth-child(4) {
+    animation-delay: 0.3s;
+}
+
+/* Адаптивность для страницы контактов */
+@media (max-width: 900px) {
+    .contactsGrid {
+        grid-template-columns: 1fr;
+        gap: var(--space-4);
+    }
+
+    .mapPlaceholder {
+        height: 250px;
+    }
+}
+
+@media (max-width: 700px) {
+    .socialLinks {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .socialSection {
+        padding: var(--space-4) var(--space-3);
+    }
+
+    .contactInfoTitle {
+        font-size: var(--font-size-base);
+    }
+
+    .mapPlaceholder {
+        height: 200px;
+        font-size: var(--font-size-base);
+    }
+
+    .consentLabel {
+        font-size: var(--font-size-sm);
+    }
+}

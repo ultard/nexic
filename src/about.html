@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru" class="htmlBase">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,24 +9,134 @@
 
     <link rel="stylesheet" href="styles/global.css">
     <link rel="stylesheet" href="styles/fonts.css">
+    <link rel="stylesheet" href="styles/about.css">
 
-    <title>Nonexsistingcompany</title>
+    <title>О нас - Nonexsistingcompany</title>
 </head>
-<body>
-<nav>
+<body class="bodyBase">
+<nav class="navBase">
     <div class="navContainer">
-        <a href="./index.html" class="navBreadcrumb">
-            <img src="/assets/logo.svg" alt="Nonexsistingcompany" height="32" width="32">
-            <p>/</p>
-            <p>О нас</p>
-        </a>
+        <div class="navBreadcrumb">
+            <a href="./index.html" class="linkBase focusVisible">
+                <img src="assets/logo.svg" alt="Nonexsistingcompany" height="32" width="32" class="imgBase">
+            </a>
+            <span style="color: var(--color-muted); margin: 0 var(--space-2);">/</span>
+            <span style="color: var(--color-muted);">О нас</span>
+        </div>
 
         <div class="navLinks">
-            <a href="./index.html">Главная</a>
-            <a href="./about.html">О нас</a>
-            <a href="./contacts.html">Контакты</a>
+            <a href="./index.html" class="navLink linkBase focusVisible">Главная</a>
+            <a href="./about.html" class="navLink navLinkActive linkBase focusVisible">О нас</a>
+            <a href="./contacts.html" class="navLink linkBase focusVisible">Контакты</a>
         </div>
     </div>
 </nav>
+
+<main class="mainContainer">
+    <h1 class="sectionTitle" style="text-align: center; margin-bottom: var(--space-5);">О нашей компании</h1>
+
+    <!-- Секция с изображением команды -->
+    <section class="sectionBase">
+        <div class="historySection">
+            <div>
+                <h2 class="sectionTitle">Наша история</h2>
+                <p class="sectionText">Nonexsistingcompany была основана в 2020 году группой энтузиастов, которые верили в силу технологий для изменения мира к лучшему. Мы начинали как небольшая команда разработчиков, но быстро выросли в полноценную IT-компанию.</p>
+                <p class="sectionText">За 5 лет работы мы реализовали более 100 проектов для клиентов из различных отраслей: от стартапов до крупных корпораций. Наш опыт охватывает веб-разработку, мобильные приложения, системы управления и консалтинг.</p>
+            </div>
+            <div>
+                <!-- Заглушка изображения команды -->
+                <div style="background: linear-gradient(135deg, var(--color-primary), var(--color-success)); height: 400px; border-radius: var(--radius); display: flex; align-items: center; justify-content: center;">
+                    <span style="color: white; font-size: 3rem;">👥</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Видео о компании с iframe -->
+    <section class="sectionBase">
+        <h2 class="sectionTitle" style="text-align: center;">Видео о нашей компании</h2>
+        <div class="mediaContainer">
+            <!-- Заглушка для iframe видео -->
+            <div style="background: var(--background-color-gray); width: 100%; height: 100%; border-radius: var(--radius); display: flex; align-items: center; justify-content: center; border: 2px dashed var(--color-muted);">
+                <p style="color: var(--color-muted); text-align: center; font-size: var(--font-size-lg);">
+                    📺<br>
+                    Здесь будет iframe видео<br>
+                    с Rutube или VK
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Команда -->
+    <section class="sectionBase">
+        <h2 class="sectionTitle">Наша команда</h2>
+        <p class="sectionText">Мы — команда опытных профессионалов, каждый из которых является экспертом в своей области.</p>
+
+        <div class="teamGrid">
+            <div class="teamCard">
+                <!-- Заглушка аватара -->
+                <div class="teamAvatar" style="width: 200px; height: 200px; background: linear-gradient(45deg, var(--color-primary), var(--color-muted)); border-radius: 50%; margin: 0 auto var(--space-3); display: flex; align-items: center; justify-content: center;">
+                    <span style="color: white; font-size: var(--font-size-3xl);">👨‍💻</span>
+                </div>
+                <h3 class="teamName">Алексей Петров</h3>
+                <p class="teamRole">Технический директор</p>
+                <p class="sectionText">15+ лет опыта в разработке, эксперт по архитектуре систем</p>
+            </div>
+
+            <div class="teamCard">
+                <!-- Заглушка аватара -->
+                <div class="teamAvatar" style="width: 200px; height: 200px; background: linear-gradient(45deg, var(--color-success), var(--color-primary)); border-radius: 50%; margin: 0 auto var(--space-3); display: flex; align-items: center; justify-content: center;">
+                    <span style="color: white; font-size: var(--font-size-3xl);">👩‍🎨</span>
+                </div>
+                <h3 class="teamName">Мария Сидорова</h3>
+                <p class="teamRole">Дизайн-директор</p>
+                <p class="sectionText">10+ лет в UX/UI дизайне, создатель узнаваемых интерфейсов</p>
+            </div>
+
+            <div class="teamCard">
+                <!-- Заглушка аватара -->
+                <div class="teamAvatar" style="width: 200px; height: 200px; background: linear-gradient(45deg, var(--color-warning), var(--color-success)); border-radius: 50%; margin: 0 auto var(--space-3); display: flex; align-items: center; justify-content: center;">
+                    <span style="color: white; font-size: var(--font-size-3xl);">👨‍💼</span>
+                </div>
+                <h3 class="teamName">Дмитрий Иванов</h3>
+                <p class="teamRole">Менеджер проектов</p>
+                <p class="sectionText">Certified PMP, специалист по Agile методологиям</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Наши ценности -->
+    <section class="sectionBase">
+        <h2 class="sectionTitle">Наши ценности</h2>
+        <div class="valuesGrid">
+            <div class="valueCard">
+                <h3 class="valueTitle">Качество</h3>
+                <p class="sectionText">Мы никогда не идем на компромиссы в качестве. Каждый проект проходит тщательное тестирование.</p>
+            </div>
+            <div class="valueCard">
+                <h3 class="valueTitle">Инновации</h3>
+                <p class="sectionText">Используем передовые технологии и следим за трендами индустрии.</p>
+            </div>
+            <div class="valueCard">
+                <h3 class="valueTitle">Партнерство</h3>
+                <p class="sectionText">Мы не просто выполняем заказы — мы становимся технологическими партнерами наших клиентов.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Призыв к действию -->
+    <section class="sectionBase ctaSection">
+        <h2 class="sectionTitle">Готовы работать с нами?</h2>
+        <p class="sectionText" style="margin-bottom: var(--space-4);">Давайте обсудим ваш проект и найдем лучшее решение</p>
+        <a href="./contacts.html" class="buttonPrimary focusVisible">Связаться с нами</a>
+    </section>
+</main>
+
+<footer class="footerBase">
+    <p>&copy; 2025 Nonexsistingcompany. Все права защищены.</p>
+    <p>Телефон: +7 (123) 456-78-90 | Email: info@nonexsistingcompany.ru</p>
+</footer>
+
+<script src="scripts/contactForm.ts" type="module"></script>
 </body>
 </html>

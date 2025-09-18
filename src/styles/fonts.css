@@ -1,10 +1,32 @@
+/* Подключение шрифтов */
+
 @font-face {
-    font-family: Montserrat;
-    src: url('../assets/fonts/Montserrat.ttf') format('truetype');
-    font-display: fallback;
+    font-family: 'Montserrat';
+    src: url('fonts/Montserrat.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
 }
 
-* {
-    font-weight: 600;
-    font-family: Montserrat, sans-serif;
+/* Применение шрифтов к элементам */
+.fontMontserrat {
+    font-family: 'Montserrat', var(--font-body);
 }
+
+/* Утилитарные классы для типографики */
+.textXs { font-size: var(--font-size-xs); }
+.textSm { font-size: var(--font-size-sm); }
+.textBase { font-size: var(--font-size-base); }
+.textLg { font-size: var(--font-size-lg); }
+.textXl { font-size: var(--font-size-xl); }
+.text2xl { font-size: var(--font-size-2xl); }
+.text3xl { font-size: var(--font-size-3xl); }
+
+.fontNormal { font-weight: 400; }
+.fontMedium { font-weight: 500; }
+.fontSemibold { font-weight: 600; }
+.fontBold { font-weight: 700; }
+
+.textCenter { text-align: center; }
+.textLeft { text-align: left; }
+.textRight { text-align: right; }
